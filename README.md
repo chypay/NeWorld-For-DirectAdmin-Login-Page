@@ -10,8 +10,11 @@
  
  ```sh
 cd /usr/local/directadmin/data/templates #进入主题所在目录
-wget http://www.elinkhost.com/download/Login-Page-2014-4-9.tar.gz #下载Login Page主题模版压缩包
-tar xvzf Login-Page-2014-4-9.tar.gz #解压缩
-chown -R diradmin:diradmin * #设置主题所有权
-rm -f Login-Page-2014-4-9.tar.gz #删除主题模版压缩包
+wget https://github.com/ydidc/NeWorld-For-DirectAdmin-Login-Page/archive/master.zip #下载NewWorld主题模版压缩包
+unzip master.zip #解压缩主题压缩包
+rm custom -rf
+rm login_images -rf
+mv NeWorld-For-DirectAdmin-Login-Page-master/* ./ #修改主题文件夹名称
+rm -f master.zip #删除主题模版压缩包
+chown -R diradmin:diradmin ./* #设置主题所有权
  ```
